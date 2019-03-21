@@ -22,30 +22,30 @@ export class StudentComponent implements OnInit {
   addStudent(student){
     this.studentService.addStudent(student);
     this.studentService.getStudents();
-    // this.student={
+    this.student={
       
-    //   rn:0,
-    //   birthDate:0,
-    //   firstName:'',
-    //   lastName:'',
-    //   parentName:'',
-    //   parentPhone:0,
-    //   address:''
-    //   }
+      rn:0,
+      birthDate:0,
+      firstName:'',
+      lastName:'',
+      parentName:'',
+      parentPhone:0,
+      address:''
+      }
     
   }
   updateStudent(student){
     this.studentService.updateStudent(student);
     this.studentService.getStudents();
-    // this.student={
-    //   rn:0,
-    //   birthDate:0,
-    //   firstName:'',
-    //   lastName:'',
-    //   parentName:'',
-    //   parentPhone:0,
-    //   address:''
-    // } ;
+    this.student={
+      rn:0,
+      birthDate:0,
+      firstName:'',
+      lastName:'',
+      parentName:'',
+      parentPhone:0,
+      address:''
+    } ;
   }
   deleteStudent(student){
   	this.studentService.deleteStudent(student);
