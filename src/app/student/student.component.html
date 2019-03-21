@@ -31,7 +31,8 @@
         <td width="25%">{{student.parentName}}</td>
         <td width="15%">{{student.parentPhone}}</td>
         <td width="25%">{{student.address}}</td>
-         <td width="25%"><input type="button" value="Delete" name="delete"  (click)="deleteStudent(student)">
+        <td><input type="button" name="edit" value="edit" (click)="onEdit(student.rn)">
+        <td width="25%"><input type="button" value="Delete" name="delete"  (click)="deleteStudent(student)">
         </td>
         
       </tbody>

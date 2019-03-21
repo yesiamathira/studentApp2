@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import  StudentService  from '../student.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-student',
@@ -18,7 +19,7 @@ export class StudentComponent implements OnInit {
   };
   students=this.studentService.getStudents();
   
-  constructor(private studentService :StudentService) { }
+  constructor(private router :Router,private studentService :StudentService) { }
   addStudent(student){
     this.studentService.addStudent(student);
     this.studentService.getStudents();
@@ -54,6 +55,11 @@ export class StudentComponent implements OnInit {
   // onSelect(student){
   //   this.studentService.onSelect(student);
   // }
+  onEdit(rn:number)
+  {
+    this.router.navigate(['/edit',rn]);
+  }
+  
   ngOnInit() {}
   
 }

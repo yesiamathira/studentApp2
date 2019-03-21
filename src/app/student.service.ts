@@ -76,4 +76,15 @@ deleteStudent(student){
     localStorage.setItem('students', JSON.stringify(this.students));
   }
   
+  getStudentById(rn){
+    for(var i=0;i<this.students.length;i++){
+        if(rn == this.students[i].rn){
+        return this.students[i];
+      }
+    }
+    return null;
+  }
+
+
+
 }
