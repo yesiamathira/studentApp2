@@ -1,0 +1,41 @@
+<div class="form">
+  <input type="number" name="rn" value="rn" [(ngModel)]="student.rn" placeholder="rollno"><br><br>
+  <input type="date" name="calender" value="calender" [(ngModel)]="student.birthDate" placeholder="birthdate"><br><br>
+  <input type="text" name="firstName" value="firstName" [(ngModel)]="student.firstName" placeholder="firstname"><br><br>
+  <input type="text" name="lastName" value="lastName" [(ngModel)]="student.lastName" placeholder="lastname"><br><br>
+  <input type="text" name="parentName" value="lastName" [(ngModel)]="student.parentName" placeholder="Parentname"><br><br>
+  <input type="number" name="parentPhone" value="parentPhone" [(ngModel)]="student.parentPhone" placeholder="parentPhone"><br><br>
+  <input type="text" name="address" value="address" [(ngModel)]="student.address" placeholder="Address"> <br><br>
+
+  <input type="button" name="add" value="Add Student" (click)="addStudent(student)" ><br><br>
+
+  <input type="button" value="Edit" name="edit" (click)="updateStudent(student)">
+</div>
+<div class="list" >
+  
+  <table style="width:100%"  border-collapse: collapse>
+      <thead>
+        <th width="15%">Roll No</th>
+        <th width="10%">Birth date</th>
+        <th width="15%">First Name</th> 
+        <th width="15%">Last Name</th>
+        <th width="25%">Parent Name</th>
+        <th width="15%">Parent Phone</th>
+        <th width="25%">Address</th>
+     </thead>
+      <tbody *ngFor="let student of students">
+        <td width="15%">{{student.rn}}</td>
+        <td width="10%">{{student.birthDate}}</td>
+        <td width="15%">{{student.firstName}}</td>
+        <td width="15%">{{student.lastName}}</td>
+        <td width="25%">{{student.parentName}}</td>
+        <td width="15%">{{student.parentPhone}}</td>
+        <td width="25%">{{student.address}}</td>
+         <td width="25%"><input type="button" value="Delete" name="delete"  (click)="deleteStudent(student)">
+        </td>
+        
+      </tbody>
+</table>
+
+<!-- value="&times;" -->
+</div>
